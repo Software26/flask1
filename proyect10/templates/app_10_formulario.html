@@ -1,0 +1,23 @@
+<!--- Si se a enviado un formulario donde dice su nombre entoces el puede mandar el msj con 
+      con el nombre en el formulario-->
+
+{% if enviado %}
+
+    <p>Hola {{nombre}},buenos dias    </p>
+
+{% else %} <!---Este es de lo contrario que el nombre no se se alla escrito imprima esto que esta aqui-->
+<p>Introduce tu nombre el formulario</p>
+
+{% endif%}
+
+<!-----Este es el formulario que esta enlazado con la otra pricipal del archivo python relacionado -->
+
+<form action="" method="POST"><!--para que no se vea en la url-->
+    {{ formulario.hidden_tag()}}<!-- Esta es la etiqueta de la clave secreta formulario. Este el nombre que se le asigno a la clase
+         {{formulario.nombre }} aqui la variable de nombre en el formulario-->
+    {{ formulario.nombre.label }} {{formulario.nombre }}<!--{{ formulario.nombre.label }} Esta es la eqtiqueta del nombre formulario
+        -->
+    {{ formulario.enviar}} <!-- Este es botton donde se encaga de mandar los datos-->
+
+
+</form>
