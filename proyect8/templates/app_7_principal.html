@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro sitio web</title>
+</head>
+<body>
+ 
+    <div>
+
+        <a href="{{ url_for('pagina3') }}"> Pagina 3</a><!---Enlace de la pagina 3-->
+        <a href="{{ url_for('pagina4') }}"> Pagina 4</a><!---Enlace de la pagina 4-->
+        <a href="{{ url_for('static',filename='imagen.jpg')}}"> Imagen bomba</a> <!-- Enlace con imagenes  utilizando url_for static=carpeta luego la imagen-->
+
+    </div>
+    
+    <br>
+    <hr>
+    <br>
+
+    {% block contenido %}
+
+    {% endblock %}
+
+
+
+    <br>
+    <hr>
+    <br>
+
+    <h5>Esto es un pie de pagina</h5>
+
+</body>
+</html>
