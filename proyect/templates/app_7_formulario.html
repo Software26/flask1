@@ -1,0 +1,16 @@
+{% extends "app_7_principal.html" %}
+
+{% block contenido %}
+
+<h3>introduzca sus datos: </h3>
+
+<form action="{{url_for('gracias')}}">
+ Nombre: <input type="text" name ="nombre">
+ <br>
+ Apellido: <input type="text" name="apellidos">
+ <br>
+ <input type="submit" value="Enviar datos">
+</form>
+
+
+{% endblock %}
